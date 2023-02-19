@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLESHEETS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,300&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" /> 
+    <link rel="stylesheet" href="/public/css/style.css">
+
+    <!-- TITLE -->
+    <title>tech blog</title>
+</head>
+
+<!-- BODY -->
+<body>
+
+    <!-- NAV -->
+     <nav>
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <span class="font-semibold text-xl tracking-tight">tech blog</span>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow">
+            <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" href="/">Home</a>
+            <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" href="/dashboard">Dashboard</a>
+              {{#if loggedIn}}
+                 <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" href="/" id="logout">Logout</a>
+              {{else}}
+                 <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" href="/login">Login</a>
+              {{/if}}
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        {{{ body }}}
+    </main>
+    
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="row items-center">
+                <p>©2023</p>
+            </div>
+        </footer>
+</body>
+
+<!-- SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script rel="text/javascript" src="/public/js/script.js"></script>
