@@ -1,0 +1,12 @@
+:root {
+    --slate : #334155;
+    --darkslate : #0f172a;
+}
+
+html {
+    font-family: Montserrat, sans-serif!important;
+    background: linear-gradient(var(--slate), var(--darkslate))!important;
+    scroll-behavior: smooth;
+    height: 100%;
+    background-attachment: fixed;
+}
