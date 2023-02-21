@@ -1,4 +1,5 @@
 :root {
+    --white : #fff;
     --slate : #334155;
     --darkslate : #0f172a;
 }
@@ -9,4 +10,28 @@ html {
     scroll-behavior: smooth;
     height: 100%;
     background-attachment: fixed;
+}
+
+h1 {
+    font-size: 25px!important;
+    font-weight: 700!important;
+    color: var(--white)!important;
+    text-align: center;
+    margin: 6px!important;
+}
+
+input {
+    border: 1px solid var(--darkslate)!important;
+    border-radius: 20px!important;
+    padding: 5px!important;
+    font-size: 15px!important;
+    font-weight: 500!important;
+    margin: 5px!important;
+}
+
+.card-body {
+    background: var(--white)!important;
+    border-radius: 20px!important;
+    padding: 20px!important;
+    margin: 10px!important;
 }
