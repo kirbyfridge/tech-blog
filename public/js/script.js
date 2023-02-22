@@ -6,12 +6,15 @@ async function loginFormHandler(event) {
   
     if (username && password) {
       const response = await fetch('/api/users/login', {
-        method: 'post',
+        headers: { 
+            'Accept' : 'application/json',
+            'Content-Type': 'application/json' 
+        },
+        method: 'POST',
         body: JSON.stringify({
-          username,
-          password
+          username: username,
+          password: password
         }),
-        headers: { 'Content-Type': 'application/json' }
       });
   
       if (response.ok) {
@@ -30,19 +33,22 @@ if (document.getElementById('login-button')) {
 async function signupFormHandler(event) {
     event.preventDefault();
 
-    const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
     if (username && email && password) {
         const response = await fetch('/api/users', {
+            headers: {
+                'Accept' : 'application/json', 
+                'Content-Type': 'application/json' 
+            },
             method: 'POST',
             body: JSON.stringify({
-                email,
-                username,
-                password
+                email: email,
+                username: username,
+                password: password
             }),
-            headers: { 'Content-Type': 'application/json' }
         });
         if (response.ok) {
             console.log('success');
@@ -61,8 +67,11 @@ if (document.getElementById('signup-button')) {
 
 async function logout() {
     const response = await fetch('/api/users/logout', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' }
+    headers: { 
+        'Accept' : 'application/json',
+        'Content-Type': 'application/json' 
+    },
+      method: 'POST',
     });
   
     if (response.ok) {
