@@ -20,12 +20,22 @@ nav a:hover {
     font-weight: 700;
 }
 
+.container {
+    transition: all .2s ease-in-out;
+
+    animation: dropfadedown .8s ease-in-out forwards;
+    animation-iteration-count: 1;
+
+    -webkit-animation: dropfadedown .8s;
+    -webkit-animation-iteration-count: 1;
+}
+
 h1 {
     font-size: 25px!important;
     font-weight: 700!important;
     color: var(--slate)!important;
     text-align: center;
-    margin: 6px!important;
+    margin: 18px!important;
 }
 
 input {
@@ -114,4 +124,14 @@ footer p {
     width: 100%;
     height: 25px; 
     text-align: center;
+}
+
+@keyframes dropfadedown {
+    from {top:-20px; opacity: 0;}
+    to {top:0px; opacity: 1}
+}
+
+@-webkit-keyframes dropfadedown {
+    from {top:-20px; opacity: 0;}
+    to {top:0px; opacity: 1;}
 }

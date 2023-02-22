@@ -1,25 +1,27 @@
  <!-- MAIN -->
 <main class="flex-grow">
-  <form id="signup-form" class="card-body">
-    <h1 class="card-header">sign up</h1>
-    <div class="form-row">
-      <label id="signup-email-label" class="form-label" for="email-signup">email</label>
-      <input  id="email-signup" type="email" class="form-input form-control" />
+    <div class="container">
+        <form id="signup-form" class="card-body">
+            <h1 class="card-header">sign up</h1>
+            <div class="form-row">
+                <label id="signup-email-label" class="form-label" for="email-signup">email</label>
+                <input  id="email-signup" name="email" type="email" class="form-input form-control" />
+            </div>
+            <div class="form-row">
+                <label id="signup-username-label" for="username-signup" class="form-label">username</label>
+                <input id="username-signup" name="username" type="text" class="form-input form-control" />
+            </div>
+            <div class="form-row">
+                <label id="signup-password-label" class="form-label" for="password-signup">password</label>
+                <input  id="password-signup" name="password" type="password" class="form-input form-control" />
+            </div>
+            <button id="signup-button" type="submit" class="btn">create account</button>
+            <div id="signup-divider"></div>
+            <div id="signup-footer">
+                <p>already have an account? <a class="btn login-link" href="/login">log in</a>.</>
+            </div>
+        </form>
     </div>
-    <div class="form-row">
-      <label id="signup-username-label" for="username-signup" class="form-label">username</label>
-      <input id="username-signup" type="text" class="form-input form-control" />
-    </div>
-    <div class="form-row">
-      <label id="signup-password-label" class="form-label" for="password-signup">password</label>
-      <input  id="password-signup" type="password" class="form-input form-control" />
-    </div>
-    <button id="signup-button" type="submit" class="btn">create account</button>
-    <div id="signup-divider"></div>
-    <div id="signup-footer">
-      <p>already have an account? <a class="btn login-link" href="/login">log in</a>.</p>
-    </div>
-  </form>
 </main>
 
 {{> footer}}
