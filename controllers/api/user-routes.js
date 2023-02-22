@@ -55,8 +55,8 @@ router.get('/:id', (req, res) => {
 });
 
 
-router.post('/signup', async (req, res) => {
-
+router.post('/', async (req, res) => {
+    try {
     await User.create({
         email: req.body.email,
         username: req.body.username,
@@ -74,13 +74,13 @@ router.post('/signup', async (req, res) => {
                 res.redirect('/'); 
             });
         })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 router.post('/login', async (req, res) => {
+    try {
     await User.findOne({
             where: {
                 username: req.body.username
@@ -110,10 +110,9 @@ router.post('/login', async (req, res) => {
                 res.redirect('/'); 
             });
         })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 router.post('/logout', (req, res) => {
