@@ -1,12 +1,19 @@
-<h1 class="card-header">create new post</h1>
-<form class="card-body new-post-form" id="new-post-form">
-    <div class="form-row">
-        <label for="post-title" class="form-label">title</label>
-        <input type="text" id="post-title" name="post-title" class="form-input form-control" />
-    </div>
-    <div class="form-row">
-        <label class="form-label" for="content">content</label>
-        <textarea id="content" name="content" class="form-input form-control"></textarea>
-    </div>  
-    <button type="submit" class="btn">post</button>
-</form>
+<!-- MAIN -->
+<main class="flex-grow">
+    <form class="card-body new-post-form" id="new-post-form">
+        <h1 class="card-header">create new post</h1>
+        <div class="form-row">
+            <label for="post-title" class="form-label">title</label>
+            <input type="text" id="post-title" name="post-title" class="form-input form-control" />
+        </div>
+        <div class="form-row">
+            <label class="form-label" for="content">content</label>
+            <textarea id="content" name="content" class="form-input form-control"></textarea>
+        </div>  
+        <button type="submit" class="btn">post</button>
+    </form>
+</main>
+
+{{> footer}}
+
+{{! Path: public\js\login.js }}
